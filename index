@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق مخصص لوحات النيون</title>
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    
+    <link rel="stylesheet" href="style.css"> 
+    
+</head>
+<body>
+    
+    <div class="logo-container">
+        <img src="images/a.jpeg" alt="شعار المتجر" class="main-logo">
+    </div>
+
+    <div class="container">
+        <h1>صمم لوحة النيون الخاصة بك</h1>
+        <div class="customizer-panel">
+            
+            <div class="neon-display">
+                <div id="customNeon" class="neon-sign neon-red">اكتب هنا</div>
+            </div>
+
+            <div class="controls-section">
+                
+                <div class="input-group">
+                    <label for="neonText">النص المطلوب:</label>
+                    <input type="text" id="neonText" value="اكتب هنا" maxlength="30">
+                </div>
+
+                <div class="custom-accordion">
+                    
+                    <div class="accordion-header active" data-target="font-body">
+                        2. اختيار الخط
+                        <span class="accordion-arrow">^</span>
+                    </div>
+                    <div id="font-body" class="accordion-body expanded">
+                        <div id="fontSelectionGrid" class="font-grid">
+                            
+                            <div class="font-option active" data-font="NeonClip">Clip</div>
+                            <div class="font-option" data-font="NeonDespairs">Despairs</div>
+                            <div class="font-option" data-font="NeonIcklips">Icklips</div>
+                            <div class="font-option" data-font="NeonKosan">Kosan</div>
+                            <div class="font-option" data-font="NeonParty">Partylicious</div>
+                            <div class="font-option" data-font="NeonPicadilly">Picadilly</div>
+                            
+                            <div class="font-option" data-font="NeonAbdoun">Abdoun</div>
+                            <div class="font-option" data-font="NeonAmman">Amman</div>
+                            <div class="font-option" data-font="NeonSwifeh">Swifeh</div>
+                            <div class="font-option" data-font="NeonSunsetClub">Sunset Club</div>
+                            <div class="font-option" data-font="NeonPolentical">Polentical Neon</div>
+                            <div class="font-option" data-font="NeonDemather">Demather</div> 
+                            <div class="font-option" data-font="NeonFloralis">Floralis</div> 
+                            <div class="font-option" data-font="Neon80s">Neon 80s</div>
+                            
+                            <div class="font-option" data-font="NeonCalenVanda">Calen Vanda</div>
+                            <div class="font-option" data-font="NeonSelovia">Selovia Demo</div>
+                            <div class="font-option" data-font="NeonKorian">Korian</div>
+                            <div class="font-option" data-font="NeonSportrop">Sportrop</div>
+                            
+                            <div class="font-option" data-font="NeonBetterOutline">Better Outline</div>
+                            <div class="font-option" data-font="NeonElegantClassic">Elegant Classic</div>
+                            <div class="font-option" data-font="NeonGlowtone">Glowtone</div>
+                            <div class="font-option" data-font="NeonBines">Neon Bines</div>
+                            <div class="font-option" data-font="NeonSpark">Neon Spark</div>
+                            <div class="font-option" data-font="NeonSans">Neon Sans</div>
+                            <div class="font-option" data-font="NeonStaymore">Staymore</div>
+                            <div class="font-option" data-font="NeonVolacrome">Volacrome</div>
+
+                        </div>
+                    </div>
+
+                    <div class="accordion-header" data-target="color-body">
+                        3. اللون والحجم
+                        <span class="accordion-arrow">></span>
+                    </div>
+                    <div id="color-body" class="accordion-body">
+                        
+                        <div class="color-grid">
+                            <div class="color-option active" data-color="CustomRed" style="background-color: #FF3366;"></div>
+                            <div class="color-option" data-color="CustomPink" style="background-color: #FF6EC4;"></div>
+                            <div class="color-option" data-color="DeepPink" style="background-color: #FF0099;"></div>
+                            <div class="color-option" data-color="Purple" style="background-color: #9933FF;"></div>
+                            <div class="color-option" data-color="ElectricBlue" style="background-color: #0099FF;"></div>
+                            <div class="color-option" data-color="IceBlue" style="background-color: #33CCFF;"></div>
+                            <div class="color-option" data-color="DeepGreen" style="background-color: #33CC00;"></div>
+                            <div class="color-option" data-color="CustomYellow" style="background-color: #FFFF33;"></div>
+                            <div class="color-option" data-color="WarmWhite" style="background-color: #FFFFAA;"></div>
+                            <div class="color-option" data-color="White" style="background-color: #FFFFFF;"></div>
+                        </div>
+                        
+                        <div class="input-group" style="margin-top: 20px;">
+                            <label for="neonSize">حجم الخط (تقريبي):</label>
+                            <input type="range" id="neonSize" min="20" max="60" value="40">
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label>إضاءة اللوحة:</label>
+                    <button id="toggleButton" class="neon-button on">إيقاف</button>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="gallery-container">
+        <h2>أعمال سابقة وتصاميم جاهزة</h2>
+        <div class="image-grid">
+            <img src="images/desktop1signs.jpg" alt="تصميم مكتبي 1">
+            <img src="images/desktop2designs.jpg" alt="تصميم مكتبي 2">
+            <img src="images/mobile2designs.jpg" alt="تصميم جوال 2">
+            <img src="images/SignDiagramUK.png" alt="مخطط تصميم">
+        </div>
+    </div>
+    <script src="app.js" defer></script>
+</body>
+  <div class="container">
+  <div class="neonText-lightBlue">
+      Codepen.io
+  </div>
+  <div class="neonText-Lightgreen">
+      Codepen.io
+  </div>
+   <div class="neonText-LightPink">
+      Codepen.io
+  </div>
+</div>
+</html>
