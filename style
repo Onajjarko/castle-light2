@@ -1,417 +1,167 @@
-/* -------------------------------------- */
-/* تعريف خطوط النيون المخصصة (النهائي) */
-/* -------------------------------------- */
-
-/* --- الخطوط الأصلية والموجودة في المجلدات الخارجية --- */
-@font-face { font-family: 'NeonClip'; src: url('./fonts/clip/Clip.ttf') format('truetype'); }
-@font-face { font-family: 'NeonDespairs'; src: url('./fonts/despairs/despairs-font-trial.ttf') format('truetype'); }
-@font-face { font-family: 'NeonIcklips'; src: url('./fonts/icklips/Icklips_.ttf') format('truetype'); }
-@font-face { font-family: 'NeonKosan'; src: url('./fonts/kosannoncommercial/KosanNonCommercial.otf') format('opentype'); }
-@font-face { font-family: 'NeonParty'; src: url('./fonts/partylicious/Partilicious.ttf') format('truetype'); }
-@font-face { font-family: 'NeonPicadilly'; src: url('./fonts/picadilly/Picadilly.ttf') format('truetype'); }
-
-/* --- خطوط مجلد castlefont --- */
-@font-face { font-family: 'NeonAbdoun'; src: url('./fonts/castlefont/Abdoun/Abdoun.ttf') format('truetype'); }
-@font-face { font-family: 'NeonAmman'; src: url('./fonts/castlefont/Amman/Amman.otf') format('opentype'); }
-@font-face { font-family: 'NeonSwifeh'; src: url('./fonts/castlefont/Swifeh/Swifeh.otf') format('opentype'); }
-@font-face { font-family: 'NeonSunsetClub'; src: url('./fonts/castlefont/sunset-club/Sunset Club Free Trial.otf') format('opentype'); }
-@font-face { font-family: 'NeonPolentical'; src: url('./fonts/castlefont/polentical-neon/Polentical Neon Regular.ttf') format('truetype'); }
-@font-face { font-family: 'NeonDemather'; src: url('./fonts/castlefont/Demather/Demather.otf') format('opentype'); }
-@font-face { font-family: 'NeonFloralis'; src: url('./fonts/castlefont/floralis/Floralis Couture.ttf') format('truetype'); }
-@font-face { font-family: 'Neon80s'; src: url('./fonts/castlefont/Neon80s/Neon.ttf') format('truetype'); }
-
-/* --- خطوط مجلد castle font 2 --- */
-@font-face { font-family: 'NeonCalenVanda'; src: url('./fonts/castle font 2/celen-vanda/Calen Vanda.otf') format('opentype'); }
-@font-face { font-family: 'NeonSelovia'; src: url('./fonts/castle font 2/it-selovia-demo/ITSeloviaDEMO-Italic.otf') format('opentype'); }
-@font-face { font-family: 'NeonKorian'; src: url('./fonts/castle font 2/korian/Korian.ttf') format('truetype'); }
-@font-face { font-family: 'NeonSportrop'; src: url('./fonts/castle font 2/sportrop/Sportrop.ttf') format('truetype'); }
-
-/* --- خطوط مجلد castle font 3 --- */
-@font-face { font-family: 'NeonBetterOutline'; src: url('./fonts/castle font 3/betteroutline/Better Outline.otf') format('opentype'); }
-@font-face { font-family: 'NeonElegantClassic'; src: url('./fonts/castle font 3/elegant-classic/Elegant Classic - Personal Use License.otf') format('opentype'); }
-@font-face { font-family: 'NeonGlowtone'; src: url('./fonts/castle font 3/glowtone-personal-use/Glowtone - Personal Use.otf') format('opentype'); }
-@font-face { font-family: 'NeonBines'; src: url('./fonts/castle font 3/neon-bines/NeonBines.otf') format('opentype'); }
-@font-face { font-family: 'NeonSpark'; src: url('./fonts/castle font 3/neon-spark/Neon Spark.otf') format('opentype'); }
-@font-face { font-family: 'NeonSans'; src: url('./fonts/castle font 3/neonsans/NeonSans.otf') format('opentype'); }
-@font-face { font-family: 'NeonStaymore'; src: url('./fonts/castle font 3/staymore/Staymore.otf') format('opentype'); }
-@font-face { font-family: 'NeonVolacrome'; src: url('./fonts/castle font 3/volacrome/VOLACROME.otf') format('opentype'); }
-
-
-/* -------------------------------------- */
-/* تنسيق الواجهة والخلفية الداكنة وتصغير اللوجو (اللوجو الواحد) */
-/* -------------------------------------- */
-
-.logo-container {
-    text-align: center; 
-    padding-top: 20px;
-    margin-bottom: 20px;
+body,
+html {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(ellipse at center, rgb(49, 44, 24) 0%, rgba(0, 0, 0, 0.73) 100%)
 }
-
-.main-logo {
-    max-width: 80px; 
-    height: auto;
-    border-radius: 8px; 
-}
-
-body {
-    background-color: #121212; /* الخلفية الداكنة */
-    color: #f0f0f0;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    direction: rtl;
-    text-align: right;
-}
-
 .container {
-    max-width: 1000px;
-    margin: 0 auto;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
-h1 {
-    text-align: center;
-    color: #fff;
-    margin-bottom: 30px;
-    margin-top: 10px;
+.neon {
+  width: 100%;
+  height: auto;
+  animation: flicker 2s linear infinite;
+}
+.neon svg {
+  width: 100%;
+  height: auto;
+}
+.off.hideonoff{
+  opacity: 0;
+}
+.chicken_f2_static.off{
+  stroke: #222;
+}
+.chicken_f2_glow.off{
+  stroke: none;
+}
+.chicken_f1_static.off{
+  stroke: #222;
+}
+.chicken_f1_glow.off{
+  stroke: none;
 }
 
-.customizer-panel {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #1f1f1f; 
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    min-height: 450px;
-}
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
 
-.controls-section {
-    flex: 1;
-    min-width: 300px;
-    padding-left: 0; 
-    margin-right: 20px; 
-}
+  4% {
+    opacity: .9;
+  }
 
-.neon-display {
-    flex: 2;
-    min-height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #333;
-    border-radius: 8px;
-    margin-left: 20px;
-    margin-right: 0;
-    background-color: #000; /* خلفية مربع النيون الأسود */
-    overflow: hidden; 
-}
+  6% {
+    opacity: .85;
+  }
 
-.input-group {
-    margin-bottom: 20px;
-}
+  8% {
+    opacity: .95;
+  }
 
-.input-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
+  10% {
+    opacity: .90;
+  }
 
-.input-group input[type="text"],
-.input-group select {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #555;
-    background-color: #2a2a2a;
-    color: #fff;
-}
+  11% {
+    opacity: .922;
+  }
 
-/* -------------------------------------- */
-/* تنسيقات الأكورديون (Accordion) */
-/* -------------------------------------- */
+  12% {
+    opacity: .9;
+  }
 
-.custom-accordion {
-    border: 1px solid #333;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
+  14% {
+    opacity: .95;
+  }
 
-.accordion-header {
-    background-color: #2a2a2a;
-    padding: 15px;
-    border-bottom: 1px solid #333;
-    cursor: pointer;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 8px; /* لتظهر الحواف المستديرة عند الإغلاق */
-}
+  16% {
+    opacity: .98;
+  }
 
-.accordion-header.active {
-    background-color: #1f1f1f; 
-    color: #00ff99;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-}
+  17% {
+    opacity: .9;
+  }
 
-.accordion-body {
-    padding: 15px;
-    background-color: #1f1f1f;
-    display: none; /* يتم التحكم بها بـ JS */
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
+  19% {
+    opacity: .93;
+  }
 
-.accordion-body.expanded {
-    display: block;
-}
+  20% {
+    opacity: .99;
+  }
 
-.accordion-arrow {
-    transition: transform 0.3s;
-}
+  24% {
+    opacity: 1;
+  }
 
-.accordion-header.active .accordion-arrow {
-    transform: rotate(180deg);
-}
+  26% {
+    opacity: .94;
+  }
 
+  28% {
+    opacity: .98;
+  }
 
-/* -------------------------------------- */
-/* تنسيق شبكة اختيار الخطوط الجديدة */
-/* -------------------------------------- */
+  37% {
+    opacity: .93;
+  }
 
-.font-grid {
-    display: grid;
-    /* 3 أعمدة متساوية */
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
-    gap: 10px;
-    padding: 5px 0;
-}
+  38% {
+    opacity: .5;
+  }
 
-.font-option {
-    padding: 12px 5px;
-    border: 1px solid #444; /* حدود رمادية */
-    border-radius: 8px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.2s;
-    background-color: #2a2a2a; /* خلفية داكنة */
-    color: #fff;
-    
-    /* يتم تطبيق الخط المختار برمجياً من JavaScript */
-    font-size: 15px; 
-    overflow: hidden; 
-    white-space: nowrap; 
-    text-overflow: ellipsis; 
-}
+  39% {
+    opacity: .96;
+  }
 
-/* تنسيق الخطوط: يتم تطبيق اسم الخط على الزر لعرضه بشكل صحيح */
-.font-option[data-font="NeonClip"] { font-family: 'NeonClip', sans-serif; }
-.font-option[data-font="NeonDespairs"] { font-family: 'NeonDespairs', sans-serif; }
-.font-option[data-font="NeonIcklips"] { font-family: 'NeonIcklips', sans-serif; }
-.font-option[data-font="NeonKosan"] { font-family: 'NeonKosan', sans-serif; }
-.font-option[data-font="NeonParty"] { font-family: 'NeonParty', sans-serif; }
-.font-option[data-font="NeonPicadilly"] { font-family: 'NeonPicadilly', sans-serif; }
-.font-option[data-font="NeonAbdoun"] { font-family: 'NeonAbdoun', sans-serif; }
-.font-option[data-font="NeonAmman"] { font-family: 'NeonAmman', sans-serif; }
-.font-option[data-font="NeonSwifeh"] { font-family: 'NeonSwifeh', sans-serif; }
-.font-option[data-font="NeonSunsetClub"] { font-family: 'NeonSunsetClub', sans-serif; }
-.font-option[data-font="NeonPolentical"] { font-family: 'NeonPolentical', sans-serif; }
-.font-option[data-font="NeonDemather"] { font-family: 'NeonDemather', sans-serif; }
-.font-option[data-font="NeonFloralis"] { font-family: 'NeonFloralis', sans-serif; }
-.font-option[data-font="Neon80s"] { font-family: 'Neon80s', sans-serif; }
-.font-option[data-font="NeonCalenVanda"] { font-family: 'NeonCalenVanda', sans-serif; }
-.font-option[data-font="NeonSelovia"] { font-family: 'NeonSelovia', sans-serif; }
-.font-option[data-font="NeonKorian"] { font-family: 'NeonKorian', sans-serif; }
-.font-option[data-font="NeonSportrop"] { font-family: 'NeonSportrop', sans-serif; }
-.font-option[data-font="NeonBetterOutline"] { font-family: 'NeonBetterOutline', sans-serif; }
-.font-option[data-font="NeonElegantClassic"] { font-family: 'NeonElegantClassic', sans-serif; }
-.font-option[data-font="NeonGlowtone"] { font-family: 'NeonGlowtone', sans-serif; }
-.font-option[data-font="NeonBines"] { font-family: 'NeonBines', sans-serif; }
-.font-option[data-font="NeonSpark"] { font-family: 'NeonSpark', sans-serif; }
-.font-option[data-font="NeonSans"] { font-family: 'NeonSans', sans-serif; }
-.font-option[data-font="NeonStaymore"] { font-family: 'NeonStaymore', sans-serif; }
-.font-option[data-font="NeonVolacrome"] { font-family: 'NeonVolacrome', sans-serif; }
+  42% {
+    opacity: 1;
+  }
 
+  44% {
+    opacity: .97;
+  }
 
-/* النمط عند المرور بالفأرة */
-.font-option:hover {
-    border-color: #00ff99; /* حدود نيون خضراء عند المرور */
-    background-color: #333;
-}
+  46% {
+    opacity: .94;
+  }
 
-/* النمط عند اختيار الخط (Active State) */
-.font-option.active {
-    background-color: #007bff; /* خلفية زرقاء (مثل الصورة) */
-    border-color: #007bff;
-    color: #fff;
-    font-weight: bold;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.7);
-}
+  56% {
+    opacity: .9;
+  }
 
-/* -------------------------------------- */
-/* تنسيق شبكة الألوان الجديدة */
-/* -------------------------------------- */
+  58% {
+    opacity: .9;
+  }
 
-.color-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr)); /* تصغير حجم المربعات قليلاً */
-    gap: 10px;
-    padding: 5px 0;
-}
+  60% {
+    opacity: .99;
+  }
 
-.color-option {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 2px solid transparent;
-    transition: border 0.2s, box-shadow 0.2s;
-    margin: 5px auto;
-}
+  68% {
+    opacity: 1;
+  }
 
-.color-option:hover {
-    border-color: #fff;
-}
+  70% {
+    opacity: .9;
+  }
 
-.color-option.active {
-    /* دائرة بيضاء داخل حدود زرقاء للتحديد */
-    border-color: #fff; 
-    box-shadow: 0 0 0 4px #007bff; /* ظل خارجي أزرق للتحديد */
-}
+  72% {
+    opacity: .95;
+  }
 
+  93% {
+    opacity: .93;
+  }
 
-/* -------------------------------------- */
-/* تنسيق زر التشغيل/الإيقاف والتوهج */
-/* -------------------------------------- */
+  95% {
+    opacity: .95;
+  }
 
-.neon-button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
+  97% {
+    opacity: .93;
+  }
 
-.neon-button.on {
-    background-color: #00ff99; 
-    color: #121212;
-    box-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99 inset;
-}
-
-.neon-button.off {
-    background-color: #444; 
-    color: #aaa;
-    box-shadow: none;
-}
-
-.neon-sign { 
-    font-family: 'NeonClip', sans-serif; /* تم تغيير الخط الافتراضي إلى NeonClip */
-    font-size: 40px; 
-    text-align: center;
-    transition: all 0.2s ease-in-out; 
-    white-space: nowrap; 
-}
-
-/* فئة إيقاف التشغيل: إلغاء التوهج */
-.neon-sign.is-off {
-    color: #666 !important; 
-    text-shadow: none !important; 
-}
-
-/* -------------------------------------- */
-/* فئات الألوان - تطبيق النمط النيوني القوي الجديد */
-/* -------------------------------------- */
-
-.neon-CustomRed {
-    color: #FF3366;
-    text-shadow: 0 0 5px #ff6699, 0 0 10px #FF3366, 0 0 15px #FF3366, 0 0 25px #FF3366;
-}
-
-.neon-CustomPink {
-    color: #FF6EC4;
-    text-shadow: 0 0 5px #ff99ff, 0 0 10px #FF6EC4, 0 0 15px #FF6EC4, 0 0 25px #FF6EC4;
-}
-
-.neon-DeepPink {
-    color: #FF0099;
-    text-shadow: 0 0 5px #ff66cc, 0 0 10px #FF0099, 0 0 15px #FF0099, 0 0 25px #FF0099;
-}
-
-.neon-Purple {
-    color: #9933FF;
-    text-shadow: 0 0 5px #cc99ff, 0 0 10px #9933FF, 0 0 15px #9933FF, 0 0 25px #9933FF;
-}
-
-.neon-ElectricBlue {
-    color: #0099FF;
-    text-shadow: 0 0 5px #66ccff, 0 0 10px #0099FF, 0 0 15px #0099FF, 0 0 25px #0099FF;
-}
-
-.neon-IceBlue {
-    color: #33CCFF;
-    text-shadow: 0 0 5px #99e6ff, 0 0 10px #33CCFF, 0 0 15px #33CCFF, 0 0 25px #33CCFF;
-}
-
-.neon-DeepGreen {
-    color: #33CC00;
-    text-shadow: 0 0 5px #99ff66, 0 0 10px #33CC00, 0 0 15px #33CC00, 0 0 25px #33CC00;
-}
-
-.neon-CustomYellow {
-    color: #FFFF33;
-    text-shadow: 0 0 5px #ffff99, 0 0 10px #FFFF33, 0 0 15px #FFFF33, 0 0 25px #FFFF33;
-}
-
-.neon-WarmWhite {
-    color: #FFFFAA; /* لون أبيض دافئ */
-    text-shadow: 0 0 5px #ffffff, 0 0 10px #FFFFAA, 0 0 15px #FFFFAA, 0 0 25px #FFFFAA;
-}
-
-.neon-White {
-    color: #FFFFFF;
-    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff, 0 0 25px #ffffff;
-}
-
-
-/* تنسيق معرض الصور */
-.gallery-container {
-    width: 100%;
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #1f1f1f;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-}
-
-.gallery-container h2 {
-    text-align: center;
-    color: #00ff99;
-    margin-bottom: 25px;
-}
-
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 15px;
-    justify-items: center;
-}
-
-.image-grid img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s;
-}
-
-.image-grid img:hover {
-    transform: scale(1.03);
-    border: 1px solid #00ff99;
+  to {
+    opacity: 1;
+  }
 }
